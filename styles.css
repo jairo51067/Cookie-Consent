@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+  max-width: 1020px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100vh;
+  padding: 3%;
+  height: 100vh;
+  background: -webkit-linear-gradient(180deg, #6a7fea, #3e3638, #000000);
+  background: linear-gradient(180deg, #6a7fea, #3e3638, #000000);
+}
+
+@media screen and (max-width: 768px) {
+  body{
+    background: #333;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  body{
+    background: #000000;
+  }
+}
+
+main{
+  margin: 10% auto;
+  max-width: 900px;
+}
+
+.contenedor {
+  position: fixed;
+  bottom: 50px;
+  right: -370px;
+  max-width: 345px;
+  width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px 25px 22px;
+  transition: right 0.3s ease;
+  z-index: 1;
+}
+
+.contenedor.show{
+  right: 1.5%;
+}
+
+.contenedor .titulo{
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+
+.contenedor i {
+  color: #4070f4;
+  font-size: 32px;
+}
+
+.contenedor h2 {
+  color: #4070f4;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.contenedor .data {
+  margin-top: 16px;
+  line-height: 22px;
+  text-align: justify;
+}
+
+.contenedor .data p {
+  color: #333;
+  font-size: 16px;
+}
+
+.contenedor .data a {
+  text-decoration: none;
+  color: #4070f4;
+  font-weight: 600;
+}
+
+.contenedor .data a:hover {
+  text-decoration: underline;
+}
+
+.contenedor .buttons {
+  margin-top: 16px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contenedor .button {
+  width: calc(100% / 2 - 10px);
+  padding: 8px 0;
+  border-radius: 4px;
+  background: #4070f4;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  outline: none;
+  border: none;
+}
+
+.contenedor .button:hover {
+  background: #3e69ff;
+}
+
+.row {
+  /* IE10 */
+  display: -ms-flexbox; 
+  display: flex;
+  /* IE10 */
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap;
+  padding: 0px 4px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  /* IE10 */
+  -ms-flex: 20%; 
+  flex: 20%;
+  max-width: 20%;
+  padding: 0px 5px;
+  box-sizing:content-box;
+  min-height: 0;
+
+}
+
+.column img {
+  margin-top: 9px;
+  vertical-align: middle;
+  object-fit: cover; /* make the image cover the full space */
+  height: max-content;
+}
+
+.column img:hover, .columnimg:focus{
+  opacity: 0.7;
+  cursor: pointer;
+  filter: drop-shadow(8px 8px 10px gray);
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  padding: 3px;
+  border-radius: 3px;
+}
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 22%;
+    flex: 22%;
+    max-width: 22%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 85%;
+    flex: 85%;
+    max-width: 85%;
+  }
+}
+
+.tooltip {
+  position: relative;
+  display:inline-block;
+  cursor: pointer;
+  justify-content: start;
+  font-size: 0.75rem;
+  font-weight: bold;
+  display: flex;
+  color: white;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 100%;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  /* Position the tooltip */
+  position: absolute;
+  top: -80%;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 0;
+  transition: opacity 9s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
