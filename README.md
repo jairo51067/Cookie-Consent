@@ -1,7 +1,7 @@
 # Cookie Consent Project  
 Este proyecto es un diseño web para un banner de consentimiento de cookies con un enfoque interactivo y visualmente atractivo. Presenta una galería de imágenes que integra tooltips descriptivos, resaltando las capacidades tecnológicas actuales, y un cuadro de diálogo de cookies que incluye opciones claras para el usuario (aceptar o rechazar).
 
-[Enlace al proyecto](https://github.com/jairo51067/cookie-consent)  
+[Enlace al proyecto](https://jairo51067.github.io/Cookie-Consent/)  
 
 Imagen del proyecto 
 ![Cookie Consent](https://github.com/user-attachments/assets/6fd23d82-8e98-44df-b0da-64f55ad271e0)
